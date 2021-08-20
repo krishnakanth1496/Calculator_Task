@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+message AdditionRequest {
+  float a = 1;
+  float b = 2;
+}
+
+message AdditionResponse {
+  float c = 1;
+}
+
+message SubstractionRequest {
+  float a = 1;
+  float b = 2;
+}
+
+message SubstractionResponse {
+  float c = 1;
+}
+
+message MultiplicationRequest {
+  float a = 1;
+  float b = 2;
+}
+
+message MultiplicationResponse {
+  float c = 1;
+}
+
+message DivisionRequest {
+  float a = 1;
+  float b = 2;
+}
+
+message DivisionResponse {
+  float c = 1;
+}
+
+service Addition {
+  rpc Addition(AdditionRequest) returns (AdditionResponse) {}
+}
+
+service Substraction {
+  rpc Substraction(SubstractionRequest) returns (SubstractionResponse) {}
+}
+
+service Multiplication {
+  rpc Multiplication(MultiplicationRequest) returns (MultiplicationResponse) {}
+}
+
+service Division {
+  rpc Division(DivisionRequest) returns (DivisionResponse) {}
+}
